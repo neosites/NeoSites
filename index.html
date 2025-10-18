@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -344,9 +343,15 @@
             transform: scale(1.05);
         }
         
-        /* Seção de depoimentos */
+        /* Seção de depoimentos - MELHORADA */
         .testimonials {
             background-color: #f9f9f9;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
         }
         
         .testimonials-grid {
@@ -393,6 +398,7 @@
             border-radius: 50%;
             overflow: hidden;
             margin-right: 15px;
+            border: 2px solid var(--primary);
         }
         
         .author-image img {
@@ -409,6 +415,102 @@
         .author-info p {
             color: var(--text-light);
             font-size: 0.9rem;
+        }
+        
+        /* Formulário de Depoimentos - NOVO */
+        .add-testimonial {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .add-testimonial h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .testimonial-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .photo-upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .photo-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+        }
+        
+        .photo-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .upload-btn {
+            background-color: var(--light);
+            color: var(--text);
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: 1px dashed #ddd;
+        }
+        
+        .upload-btn:hover {
+            background-color: #e0e0e0;
         }
         
         /* Seção de números */
@@ -584,37 +686,6 @@
             box-shadow: var(--shadow);
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
         /* Rodapé */
         footer {
             background-color: var(--secondary);
@@ -740,6 +811,10 @@
             .about-content {
                 flex-direction: column;
             }
+            
+            .testimonial-form {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -811,6 +886,10 @@
             
             .service-card {
                 padding: 30px 20px;
+            }
+            
+            .add-testimonial {
+                padding: 20px;
             }
         }
     </style>
@@ -924,55 +1003,54 @@
         </div>
     </section>
 
-    <!-- Seção de Depoimentos -->
+    <!-- Seção de Depoimentos - MELHORADA -->
     <section class="testimonials section-padding" id="testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>O Que Nossos Clientes Dizem</h2>
                 <p>Confira alguns depoimentos de quem já experimentou nossos serviços</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "A Empresa XYZ transformou completamente nossa presença digital. Em apenas 3 meses, nossas vendas online aumentaram 150%. A equipe foi extremamente profissional e atenciosa em todas as etapas do projeto."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva">
+            
+            <div class="testimonials-container">
+                <!-- Formulário para Adicionar Depoimento - NOVO -->
+                <div class="add-testimonial">
+                    <h3>Deixe seu Depoimento</h3>
+                    <form class="testimonial-form" id="testimonialForm">
+                        <div class="form-group">
+                            <label for="userName">Nome Completo</label>
+                            <input type="text" id="userName" class="form-control" required>
                         </div>
-                        <div class="author-info">
-                            <h4>Maria Silva</h4>
-                            <p>Diretora de Marketing</p>
+                        <div class="form-group">
+                            <label for="userRole">Cargo/Profissão</label>
+                            <input type="text" id="userRole" class="form-control" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="userCompany">Empresa (opcional)</label>
+                            <input type="text" id="userCompany" class="form-control">
+                        </div>
+                        <div class="form-group photo-upload">
+                            <label>Foto de Perfil</label>
+                            <div class="photo-preview" id="photoPreview">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="upload-btn" id="uploadTrigger">
+                                Escolher Foto
+                            </div>
+                            <input type="file" id="userPhoto" accept="image/*" style="display: none;">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="userTestimonial">Seu Depoimento</label>
+                            <textarea id="userTestimonial" class="form-control" required placeholder="Conte sua experiência com nossa empresa..."></textarea>
+                        </div>
+                        <div class="form-group full-width" style="text-align: center;">
+                            <button type="submit" class="btn">Enviar Depoimento</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "O trabalho da equipe foi excepcional. Entenderam perfeitamente nossas necessidades e entregaram resultados além do esperado. A comunicação foi clara e o projeto foi concluído dentro do prazo e orçamento."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Santos">
-                        </div>
-                        <div class="author-info">
-                            <h4>João Santos</h4>
-                            <p>CEO da Empresa ABC</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Profissionais extremamente competentes e dedicados. Recomendo a todos que buscam qualidade e resultados concretos. O suporte pós-entrega também é excelente, sempre disponíveis para ajustes e melhorias."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Oliveira">
-                        </div>
-                        <div class="author-info">
-                            <h4>Ana Oliveira</h4>
-                            <p>Gerente de Projetos</p>
-                        </div>
-                    </div>
+                
+                <!-- Grid de Depoimentos -->
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Depoimentos serão carregados aqui via JavaScript -->
                 </div>
             </div>
         </div>
@@ -1218,6 +1296,38 @@
     </footer>
 
     <script>
+        // Depoimentos iniciais com fotos mais realistas
+        const initialTestimonials = [
+            {
+                name: "Carlos Mendes",
+                role: "Diretor Comercial",
+                company: "TechSolutions Ltda",
+                photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&q=60",
+                text: "A Empresa XYZ revolucionou nossa estratégia digital. Em 6 meses, nosso faturamento online cresceu 200%. Profissionais extremamente competentes."
+            },
+            {
+                name: "Ana Santos",
+                role: "Gerente de Marketing",
+                company: "GlobalCommerce",
+                photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
+                text: "Trabalho excepcional! Desenvolveram nossa plataforma de e-commerce com perfeição. Suporte pós-venda impecável e sempre disponível."
+            },
+            {
+                name: "Roberto Silva",
+                role: "CEO",
+                company: "InovaTech",
+                photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0JTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60",
+                text: "Parceria de longa data. A Empresa XYZ entende profundamente nosso negócio e sempre entrega soluções que superam expectativas."
+            },
+            {
+                name: "Mariana Oliveira",
+                role: "Fundadora",
+                company: "EcoProducts",
+                photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
+                text: "Consultoria estratégica transformadora. Nos ajudaram a reposicionar nossa marca e os resultados foram impressionantes. Recomendo!"
+            }
+        ];
+
         // Menu mobile
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
@@ -1255,6 +1365,77 @@
             alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
             contactForm.reset();
         });
+
+        // Sistema de Depoimentos - NOVO
+        const testimonialForm = document.getElementById('testimonialForm');
+        const testimonialsGrid = document.getElementById('testimonialsGrid');
+        const uploadTrigger = document.getElementById('uploadTrigger');
+        const userPhoto = document.getElementById('userPhoto');
+        const photoPreview = document.getElementById('photoPreview');
+
+        // Carregar depoimentos do localStorage ou usar os iniciais
+        let testimonials = JSON.parse(localStorage.getItem('testimonials')) || initialTestimonials;
+
+        // Função para renderizar depoimentos
+        function renderTestimonials() {
+            testimonialsGrid.innerHTML = '';
+            testimonials.forEach(testimonial => {
+                const testimonialCard = document.createElement('div');
+                testimonialCard.className = 'testimonial-card';
+                testimonialCard.innerHTML = `
+                    <div class="testimonial-text">"${testimonial.text}"</div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="${testimonial.photo}" alt="${testimonial.name}">
+                        </div>
+                        <div class="author-info">
+                            <h4>${testimonial.name}</h4>
+                            <p>${testimonial.role}${testimonial.company ? ` • ${testimonial.company}` : ''}</p>
+                        </div>
+                    </div>
+                `;
+                testimonialsGrid.appendChild(testimonialCard);
+            });
+        }
+
+        // Upload de foto
+        uploadTrigger.addEventListener('click', () => {
+            userPhoto.click();
+        });
+
+        userPhoto.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    photoPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Envio do formulário de depoimento
+        testimonialForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const newTestimonial = {
+                name: document.getElementById('userName').value,
+                role: document.getElementById('userRole').value,
+                company: document.getElementById('userCompany').value,
+                text: document.getElementById('userTestimonial').value,
+                photo: photoPreview.querySelector('img') ? photoPreview.querySelector('img').src : 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60'
+            };
+
+            testimonials.unshift(newTestimonial);
+            localStorage.setItem('testimonials', JSON.stringify(testimonials));
+            renderTestimonials();
+            testimonialForm.reset();
+            photoPreview.innerHTML = '<i class="fas fa-user"></i>';
+            alert('Depoimento enviado com sucesso! Obrigado por compartilhar sua experiência.');
+        });
+
+        // Inicializar depoimentos
+        renderTestimonials();
         
         // Scroll animations
         const fadeElements = document.querySelectorAll('.service-card, .testimonial-card, .faq-item, .about-content, .numbers-grid');
