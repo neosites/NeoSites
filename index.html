@@ -242,10 +242,10 @@
             margin: 20px auto 0;
         }
         
-        /* Services Grid - Modificado para 4 cards em 2x2 */
+        /* Services Grid - Modificado para 2x2 em telas menores */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
@@ -993,9 +993,9 @@
                 gap: 20px;
             }
             
-            /* Responsividade para a nova grid de serviços */
+            /* Layout 2x2 para serviços em dispositivos móveis */
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -1014,6 +1014,11 @@
             
             .pricing-card {
                 padding: 30px 20px;
+            }
+            
+            /* Para telas muito pequenas, voltar para 1 coluna */
+            .services-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
