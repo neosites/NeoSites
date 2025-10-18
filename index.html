@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoSites - Sites Profissionais 100% Anônimos</title>
-    <meta name="description" content="Criamos sites profissionais sem você precisar aparecer. Sites para salões, autônomos e pequenas empresas. Pronto em 7 dias com preços acessíveis.">
+    <title>NeoSites - Sites Profissionais que Convertem</title>
+    <meta name="description" content="Criamos sites profissionais para salões, autônomos e pequenas empresas. Design moderno, otimizado para resultados e prontos em 7 dias.">
     <style>
-        /* Reset e estilos gerais */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +17,7 @@
             --primary: #27ae60;
             --primary-dark: #219653;
             --secondary: #2c3e50;
-            --accent: #e74c3c;
+            --accent: #e67e22;
             --light: #ecf0f1;
             --dark: #34495e;
             --text: #333;
@@ -44,7 +43,7 @@
             padding: 80px 0;
         }
         
-        /* Cabeçalho */
+        /* Header */
         header {
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -102,21 +101,6 @@
         
         nav ul li a:hover {
             color: var(--primary);
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
         }
         
         .mobile-menu-btn {
@@ -181,7 +165,7 @@
             color: var(--secondary);
         }
         
-        /* Selos de Credibilidade */
+        /* Credibility Badges */
         .credibility-badges {
             display: flex;
             justify-content: center;
@@ -209,7 +193,7 @@
             color: var(--light);
         }
         
-        /* Seção de serviços */
+        /* Services */
         .services {
             background-color: #f9f9f9;
         }
@@ -300,18 +284,7 @@
             transform: scale(1.1);
         }
         
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--secondary);
-            transition: var(--transition);
-        }
-        
-        .service-card p {
-            color: var(--text-light);
-            transition: var(--transition);
-        }
-        
-        /* Seção sobre */
+        /* About */
         .about-content {
             display: flex;
             align-items: center;
@@ -371,7 +344,7 @@
             transform: scale(1.05);
         }
         
-        /* Seção de Processo */
+        /* Process */
         .process {
             background-color: #f9f9f9;
         }
@@ -406,7 +379,7 @@
             margin: 0 auto 20px;
         }
         
-        /* Seção de Planos */
+        /* Pricing */
         .pricing {
             background-color: white;
         }
@@ -480,9 +453,63 @@
             margin-right: 10px;
         }
         
-        /* Seção de depoimentos */
-        .testimonials {
+        /* Portfolio */
+        .portfolio {
             background-color: #f9f9f9;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .portfolio-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portfolio-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-info {
+            padding: 20px;
+        }
+        
+        .portfolio-info h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
         }
         
         .testimonials-container {
@@ -503,6 +530,7 @@
             padding: 30px;
             box-shadow: var(--shadow);
             position: relative;
+            border: 1px solid #eaeaea;
         }
         
         .testimonial-card::before {
@@ -554,103 +582,36 @@
             font-size: 0.9rem;
         }
         
-        /* Formulário de Depoimentos */
-        .add-testimonial {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
+        /* Live Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
         }
         
-        .add-testimonial h3 {
-            color: var(--secondary);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .testimonial-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .photo-upload {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .photo-preview {
-            width: 100px;
-            height: 100px;
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
             border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid var(--primary);
-            background-color: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-light);
-        }
-        
-        .photo-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .upload-btn {
-            background-color: var(--light);
-            color: var(--text);
-            padding: 8px 15px;
-            border-radius: 5px;
+            font-size: 1.5rem;
             cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: var(--transition);
-            text-align: center;
-            border: 1px dashed #ddd;
+            border: none;
         }
         
-        .upload-btn:hover {
-            background-color: #e0e0e0;
+        .chat-button:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.1);
         }
         
-        /* Seção de Garantia */
+        /* Guarantee */
         .guarantee {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -668,7 +629,7 @@
             margin-bottom: 20px;
         }
         
-        /* Seção de FAQ */
+        /* FAQ */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
@@ -730,7 +691,7 @@
             transform: rotate(180deg);
         }
         
-        /* Seção de CTA */
+        /* CTA */
         .cta {
             background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             color: white;
@@ -749,7 +710,7 @@
             margin: 0 auto 30px;
         }
         
-        /* Seção de contato */
+        /* Contact */
         .contact {
             background-color: #f9f9f9;
         }
@@ -790,7 +751,38 @@
             box-shadow: var(--shadow);
         }
         
-        /* Rodapé */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
         footer {
             background-color: var(--secondary);
             color: white;
@@ -916,10 +908,6 @@
                 flex-direction: column;
             }
             
-            .testimonial-form {
-                grid-template-columns: 1fr;
-            }
-            
             .pricing-card.featured {
                 transform: scale(1);
             }
@@ -1004,10 +992,6 @@
                 padding: 30px 20px;
             }
             
-            .add-testimonial {
-                padding: 20px;
-            }
-            
             .pricing-card {
                 padding: 30px 20px;
             }
@@ -1016,7 +1000,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -1032,7 +1016,7 @@
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
-                    <li><a href="#process">Como Funciona</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#pricing">Planos</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -1042,14 +1026,14 @@
         </div>
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Banner -->
     <section class="banner" id="home">
         <div class="container">
-            <h1>Seu Site Profissional, Sem Você Aparecer</h1>
-            <p>Presença digital completa para salões, autônomos e pequenas empresas. Sites profissionais prontos em 7 dias, 100% anônimo e sem investimento inicial.</p>
+            <h1>Seu Site Profissional em 7 Dias</h1>
+            <p>Desenvolvemos sites modernos e otimizados para salões, autônomos e pequenas empresas. Design profissional que converte visitantes em clientes.</p>
             <div class="btn-group">
                 <a href="#pricing" class="btn">Ver Planos</a>
-                <a href="#process" class="btn btn-secondary">Como Funciona</a>
+                <a href="#portfolio" class="btn btn-secondary">Ver Portfólio</a>
             </div>
             
             <div class="credibility-badges">
@@ -1067,9 +1051,9 @@
                 </div>
                 <div class="badge">
                     <div class="badge-icon">
-                        <i class="fas fa-user-secret"></i>
+                        <i class="fas fa-medal"></i>
                     </div>
-                    <div class="badge-text">100% Anônimo</div>
+                    <div class="badge-text">Qualidade Garantida</div>
                 </div>
                 <div class="badge">
                     <div class="badge-icon">
@@ -1081,7 +1065,7 @@
         </div>
     </section>
 
-    <!-- Seção de Serviços -->
+    <!-- Services -->
     <section class="services section-padding" id="services">
         <div class="container">
             <div class="section-title">
@@ -1114,30 +1098,30 @@
         </div>
     </section>
 
-    <!-- Seção Sobre -->
+    <!-- About -->
     <section class="about section-padding" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Por Que Escolher a NeoSites?</h2>
-                    <p>Entendemos que cada negócio é único, especialmente para profissionais que preferem manter o anonimato online. Criamos soluções que respeitam sua privacidade enquanto constroem sua presença digital.</p>
+                    <h2>Soluções Profissionais para Seu Negócio</h2>
+                    <p>Com anos de experiência no mercado digital, desenvolvemos sites que não apenas impressionam visualmente, mas também geram resultados concretos para seu negócio.</p>
                     
                     <div class="about-features">
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Totalmente anônimo - você não precisa aparecer</span>
+                            <span>Design moderno e responsivo</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Preços acessíveis sem surpresas</span>
+                            <span>Otimizado para mecanismos de busca</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Suporte especializado em português</span>
+                            <span>Integração com redes sociais</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Entrega rápida - site em 7 dias</span>
+                            <span>Suporte técnico especializado</span>
                         </div>
                     </div>
                     
@@ -1150,7 +1134,49 @@
         </div>
     </section>
 
-    <!-- Seção de Processo -->
+    <!-- Portfolio -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Portfólio</h2>
+                <p>Conheça alguns dos projetos que desenvolvemos</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Site para salão de beleza">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Salão Elegance</h3>
+                        <p>Site institucional para salão de beleza com galeria de trabalhos e agendamento online.</p>
+                        <a href="#" class="btn">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Site para eletricista">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Eletricista JS</h3>
+                        <p>Site profissional para serviços elétricos com área de atuação e orçamento online.</p>
+                        <a href="#" class="btn">Ver Projeto</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551833996-8c8c50e90e16?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Site para consultor">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Consultoria ABC</h3>
+                        <p>Landing page para captação de leads com formulário otimizado e call-to-action estratégico.</p>
+                        <a href="#" class="btn">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
     <section class="process section-padding" id="process">
         <div class="container">
             <div class="section-title">
@@ -1161,29 +1187,29 @@
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Escolha o Plano</h3>
-                    <p>Selecione o plano que melhor atende suas necessidades e orçamento</p>
+                    <h3>Briefing</h3>
+                    <p>Entendemos suas necessidades e objetivos para criar a solução perfeita</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Preencha o Formulário</h3>
-                    <p>Envie suas informações e preferências através do nosso formulário seguro</p>
+                    <h3>Protótipo</h3>
+                    <p>Desenvolvemos o layout para sua aprovação antes da implementação</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>Aprovação do Layout</h3>
-                    <p>Em 48h você recebe o layout para aprovação e ajustes finais</p>
+                    <h3>Desenvolvimento</h3>
+                    <p>Criamos seu site com as melhores práticas e tecnologias atuais</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Site Pronto</h3>
-                    <p>Em 7 dias seu site estará no ar e pronto para receber clientes</p>
+                    <h3>Entrega</h3>
+                    <p>Seu site pronto e otimizado para receber seus clientes</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Planos -->
+    <!-- Pricing -->
     <section class="pricing section-padding" id="pricing">
         <div class="container">
             <div class="section-title">
@@ -1243,20 +1269,7 @@
         </div>
     </section>
 
-    <!-- Seção de Garantia -->
-    <section class="guarantee section-padding">
-        <div class="container">
-            <div class="guarantee-content">
-                <div class="guarantee-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <h2>Garantia de Satisfação</h2>
-                <p>Se em 14 dias você não estiver completamente satisfeito com seu site, devolvemos 100% do seu investimento. Trabalhamos com transparência e compromisso com seus resultados.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Depoimentos -->
+    <!-- Testimonials -->
     <section class="testimonials section-padding" id="testimonials">
         <div class="container">
             <div class="section-title">
@@ -1265,51 +1278,27 @@
             </div>
             
             <div class="testimonials-container">
-                <!-- Grid de Depoimentos -->
                 <div class="testimonials-grid" id="testimonialsGrid">
-                    <!-- Depoimentos serão carregados aqui via JavaScript -->
-                </div>
-                
-                <!-- Formulário para Adicionar Depoimento -->
-                <div class="add-testimonial">
-                    <h3>Deixe Seu Depoimento</h3>
-                    <form class="testimonial-form" id="testimonialForm">
-                        <div class="form-group">
-                            <label for="userName">Nome Completo</label>
-                            <input type="text" id="userName" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="userRole">Cargo/Profissão</label>
-                            <input type="text" id="userRole" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="userCompany">Empresa (opcional)</label>
-                            <input type="text" id="userCompany" class="form-control">
-                        </div>
-                        <div class="form-group photo-upload">
-                            <label>Foto de Perfil</label>
-                            <div class="photo-preview" id="photoPreview">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="upload-btn" id="uploadTrigger">
-                                Escolher Foto
-                            </div>
-                            <input type="file" id="userPhoto" accept="image/*" style="display: none;">
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="userTestimonial">Seu Depoimento</label>
-                            <textarea id="userTestimonial" class="form-control" required placeholder="Conte sua experiência com a NeoSites..."></textarea>
-                        </div>
-                        <div class="form-group full-width" style="text-align: center;">
-                            <button type="submit" class="btn">Enviar Depoimento</button>
-                        </div>
-                    </form>
+                    <!-- Depoimentos carregados via JavaScript -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de FAQ -->
+    <!-- Guarantee -->
+    <section class="guarantee section-padding">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h2>Garantia de Satisfação</h2>
+                <p>Oferecemos 14 dias de garantia incondicional. Se não ficar satisfeito com seu site, devolvemos 100% do seu investimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
     <section class="faq section-padding" id="faq">
         <div class="container">
             <div class="section-title">
@@ -1318,21 +1307,15 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">Como funciona o processo 100% anônimo?</div>
+                    <div class="faq-question">Qual é o prazo para entrega do site?</div>
                     <div class="faq-answer">
-                        <p>Você não precisa mostrar rosto, usar voz ou revelar sua identidade em nenhuma etapa. Todo o processo é feito por formulários, e-mail e WhatsApp. Seu site será criado sem qualquer referência pessoal, mantendo seu anonimato completo.</p>
+                        <p>Nosso prazo padrão é de 7 dias úteis. Em casos de urgência, oferecemos a opção de entrega em 3 dias com acréscimo no valor.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Quais são as formas de pagamento?</div>
                     <div class="faq-answer">
                         <p>Aceitamos PIX e Mercado Pago. Para o PIX, enviamos uma chave aleatória para pagamento. No Mercado Pago, você pode pagar com cartão de crédito (em até 12x) ou boleto.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Qual é o prazo para entrega do site?</div>
-                    <div class="faq-answer">
-                        <p>Nosso prazo padrão é de 7 dias úteis. Em casos de urgência, oferecemos a opção de entrega em 3 dias com acréscimo no valor. Após o preenchimento do formulário e aprovação do layout, mantemos você informado sobre cada etapa.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1351,7 +1334,7 @@
         </div>
     </section>
 
-    <!-- Seção de CTA -->
+    <!-- CTA -->
     <section class="cta section-padding">
         <div class="container">
             <h2>Pronto para Ter Seu Site Profissional?</h2>
@@ -1360,7 +1343,7 @@
         </div>
     </section>
 
-    <!-- Seção de Contato -->
+    <!-- Contact -->
     <section class="contact section-padding" id="contact">
         <div class="container">
             <div class="section-title">
@@ -1446,13 +1429,13 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3>NeoSites</h3>
-                    <p>Criamos sites profissionais 100% anônimos para salões, autônomos e pequenas empresas. Presença digital sem você aparecer.</p>
+                    <p>Criamos sites profissionais para salões, autônomos e pequenas empresas. Design moderno e otimizado para resultados.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1465,7 +1448,7 @@
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#services">Serviços</a></li>
-                        <li><a href="#process">Como Funciona</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#pricing">Planos</a></li>
                         <li><a href="#testimonials">Depoimentos</a></li>
                     </ul>
@@ -1489,27 +1472,34 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 NeoSites. Todos os direitos reservados. | Sites profissionais 100% anônimos</p>
+                <p>&copy; 2023 NeoSites. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
     <script>
-        // Depoimentos iniciais com fotos mais realistas
+        // Depoimentos iniciais
         const initialTestimonials = [
             {
                 name: "Carlos Mendes",
                 role: "Dono de Salão",
                 company: "Beleza Total",
                 photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&q=60",
-                text: "Contratei a NeoSites para criar o site do meu salão e foi a melhor decisão. Em uma semana estava tudo pronto, sem eu precisar aparecer. Agora meus clientes agendam pelo site!"
+                text: "Contratei a NeoSites para criar o site do meu salão e foi a melhor decisão. Em uma semana estava tudo pronto. Agora meus clientes agendam pelo site e as vendas aumentaram 40%!"
             },
             {
                 name: "Ana Santos",
                 role: "Eletricista",
                 company: "Instalações Elétricas AS",
                 photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
-                text: "Como mulher na área técnica, prefiro não me expor. A NeoSites entendeu perfeitamente minha necessidade e criou um site profissional que gera credibilidade sem mostrar meu rosto."
+                text: "Site profissional que transmite credibilidade. Recebo muitos contatos através do formulário do site. O suporte é excelente e sempre respondem rapidamente."
             },
             {
                 name: "Roberto Silva",
@@ -1517,13 +1507,6 @@
                 company: "RS Consultoria",
                 photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0JTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60",
                 text: "Excelente serviço! Site entregue antes do prazo, exatamente como combinado. Manutenção mensal me deixa tranquilo sabendo que tudo está funcionando perfeitamente."
-            },
-            {
-                name: "Mariana Oliveira",
-                role: "Designer de Sobrancelhas",
-                company: "Studio Mari",
-                photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
-                text: "Adorei o processo 100% anônimo. Pude ter um site lindo sem precisar gravar vídeos ou fazer fotos profissionais. Recomendo para quem valoriza privacidade!"
             }
         ];
 
@@ -1566,11 +1549,7 @@
         });
 
         // Sistema de Depoimentos
-        const testimonialForm = document.getElementById('testimonialForm');
         const testimonialsGrid = document.getElementById('testimonialsGrid');
-        const uploadTrigger = document.getElementById('uploadTrigger');
-        const userPhoto = document.getElementById('userPhoto');
-        const photoPreview = document.getElementById('photoPreview');
 
         // Carregar depoimentos do localStorage ou usar os iniciais
         let testimonials = JSON.parse(localStorage.getItem('neosites_testimonials')) || initialTestimonials;
@@ -1597,47 +1576,18 @@
             });
         }
 
-        // Upload de foto
-        uploadTrigger.addEventListener('click', () => {
-            userPhoto.click();
-        });
-
-        userPhoto.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    photoPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // Envio do formulário de depoimento
-        testimonialForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const newTestimonial = {
-                name: document.getElementById('userName').value,
-                role: document.getElementById('userRole').value,
-                company: document.getElementById('userCompany').value,
-                text: document.getElementById('userTestimonial').value,
-                photo: photoPreview.querySelector('img') ? photoPreview.querySelector('img').src : 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60'
-            };
-
-            testimonials.unshift(newTestimonial);
-            localStorage.setItem('neosites_testimonials', JSON.stringify(testimonials));
-            renderTestimonials();
-            testimonialForm.reset();
-            photoPreview.innerHTML = '<i class="fas fa-user"></i>';
-            alert('Depoimento enviado com sucesso! Obrigado por compartilhar sua experiência.');
-        });
-
         // Inicializar depoimentos
         renderTestimonials();
         
+        // Chat Widget
+        const chatButton = document.getElementById('chatButton');
+        
+        chatButton.addEventListener('click', () => {
+            window.open('https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre os sites.', '_blank');
+        });
+        
         // Scroll animations
-        const fadeElements = document.querySelectorAll('.service-card, .testimonial-card, .faq-item, .about-content, .process-step, .pricing-card');
+        const fadeElements = document.querySelectorAll('.service-card, .testimonial-card, .faq-item, .about-content, .process-step, .pricing-card, .portfolio-item');
         
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
