@@ -453,6 +453,186 @@
             margin-right: 10px;
         }
         
+        /* Checkout Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .checkout-content {
+            background-color: white;
+            margin: 50px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .checkout-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .checkout-header h2 {
+            margin-bottom: 10px;
+        }
+        
+        .close-checkout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .checkout-body {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .order-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .summary-total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .payment-methods {
+            margin-top: 20px;
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .payment-option:hover {
+            border-color: var(--primary);
+        }
+        
+        .payment-option.selected {
+            border-color: var(--primary);
+            background-color: rgba(39, 174, 96, 0.05);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+        
+        .payment-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .payment-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .checkout-form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+        }
+        
+        .checkout-footer {
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .security-badge {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .security-badge i {
+            color: var(--primary);
+            margin-right: 5px;
+        }
+        
         /* Portfolio */
         .portfolio {
             background-color: #f9f9f9;
@@ -751,37 +931,6 @@
             box-shadow: var(--shadow);
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
         /* Footer */
         footer {
             background-color: var(--secondary);
@@ -915,6 +1064,10 @@
             .pricing-card.featured:hover {
                 transform: translateY(-10px);
             }
+            
+            .checkout-body {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -994,6 +1147,14 @@
             
             .pricing-card {
                 padding: 30px 20px;
+            }
+            
+            .checkout-content {
+                margin: 20px;
+            }
+            
+            .checkout-body {
+                padding: 20px;
             }
         }
     </style>
@@ -1228,7 +1389,7 @@
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
                         <li><i class="fas fa-check"></i> Integração com WhatsApp</li>
                     </ul>
-                    <a href="#contact" class="btn">Escolher Plano</a>
+                    <button class="btn checkout-btn" data-plan="Básico" data-price="199">Comprar Agora</button>
                 </div>
                 
                 <div class="pricing-card featured">
@@ -1242,7 +1403,7 @@
                         <li><i class="fas fa-check"></i> Integração redes sociais</li>
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
                     </ul>
-                    <a href="#contact" class="btn">Escolher Plano</a>
+                    <button class="btn checkout-btn" data-plan="Pro" data-price="299">Comprar Agora</button>
                 </div>
                 
                 <div class="pricing-card">
@@ -1256,7 +1417,7 @@
                         <li><i class="fas fa-check"></i> Analytics integrado</li>
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
                     </ul>
-                    <a href="#contact" class="btn">Escolher Plano</a>
+                    <button class="btn checkout-btn" data-plan="Premium" data-price="499">Comprar Agora</button>
                 </div>
             </div>
             
@@ -1264,10 +1425,127 @@
                 <div class="plan-name">Manutenção Mensal</div>
                 <div class="plan-price">R$49<span>/mês</span></div>
                 <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 20px;">Atualizações, segurança, backups e suporte técnico para manter seu site sempre perfeito</p>
-                <a href="#contact" class="btn">Contratar Manutenção</a>
+                <button class="btn checkout-btn" data-plan="Manutenção Mensal" data-price="49">Contratar Manutenção</button>
             </div>
         </div>
     </section>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <button class="close-checkout" id="closeCheckout">&times;</button>
+                <h2>Finalizar Compra</h2>
+                <p>Preencha seus dados para concluir o pedido</p>
+            </div>
+            
+            <div class="checkout-body">
+                <div class="order-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="summary-item">
+                        <span>Produto:</span>
+                        <span id="summaryPlan">-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Valor:</span>
+                        <span id="summaryPrice">-</span>
+                    </div>
+                    <div class="summary-item summary-total">
+                        <span>Total:</span>
+                        <span id="summaryTotal">-</span>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h3>Forma de Pagamento</h3>
+                        
+                        <div class="payment-option" data-method="pix">
+                            <div class="payment-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <div class="payment-info">
+                                <h4>PIX</h4>
+                                <p>Pagamento instantâneo - 5% de desconto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option" data-method="mercadopago">
+                            <div class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="payment-info">
+                                <h4>Mercado Pago</h4>
+                                <p>Cartão de crédito, débito ou boleto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkout-form">
+                    <h3>Dados Pessoais</h3>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="customerName">Nome Completo *</label>
+                            <input type="text" id="customerName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">E-mail *</label>
+                            <input type="email" id="customerEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">WhatsApp *</label>
+                            <input type="tel" id="customerPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerBusiness">Nome do Negócio</label>
+                            <input type="text" id="customerBusiness" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerNotes">Observações</label>
+                            <textarea id="customerNotes" class="form-control" placeholder="Alguma informação adicional sobre seu projeto..."></textarea>
+                        </div>
+                        
+                        <div class="payment-details" id="pixDetails" style="display: none;">
+                            <h4>Pagamento via PIX</h4>
+                            <p>Você receberá o QR Code e código PIX após confirmar o pedido.</p>
+                            <div class="pix-benefits">
+                                <p><i class="fas fa-bolt"></i> <strong>Pagamento instantâneo</strong></p>
+                                <p><i class="fas fa-tag"></i> <strong>5% de desconto aplicado</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-details" id="mercadopagoDetails" style="display: none;">
+                            <h4>Pagamento via Mercado Pago</h4>
+                            <p>Você será redirecionado para o Mercado Pago para finalizar o pagamento.</p>
+                            <div class="mercadopago-benefits">
+                                <p><i class="fas fa-credit-card"></i> <strong>Cartão de crédito em até 12x</strong></p>
+                                <p><i class="fas fa-barcode"></i> <strong>Boleto bancário</strong></p>
+                                <p><i class="fas fa-mobile-alt"></i> <strong>Débito online</strong></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="checkout-footer">
+                <div class="security-badges">
+                    <div class="security-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Pagamento 100% Seguro</span>
+                    </div>
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Dados Protegidos</span>
+                    </div>
+                    <div class="security-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Garantia de 14 Dias</span>
+                    </div>
+                </div>
+                <button class="btn" id="confirmPayment" style="width: 100%; max-width: 300px;">Finalizar Pedido</button>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: var(--text-light);">Ao finalizar, você concorda com nossos <a href="#" style="color: var(--primary);">Termos de Serviço</a></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonials -->
     <section class="testimonials section-padding" id="testimonials">
@@ -1315,7 +1593,7 @@
                 <div class="faq-item">
                     <div class="faq-question">Quais são as formas de pagamento?</div>
                     <div class="faq-answer">
-                        <p>Aceitamos PIX e Mercado Pago. Para o PIX, enviamos uma chave aleatória para pagamento. No Mercado Pago, você pode pagar com cartão de crédito (em até 12x) ou boleto.</p>
+                        <p>Aceitamos PIX (com 5% de desconto) e Mercado Pago. No Mercado Pago, você pode pagar com cartão de crédito (em até 12x) ou boleto.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1339,7 +1617,7 @@
         <div class="container">
             <h2>Pronto para Ter Seu Site Profissional?</h2>
             <p>Junte-se a mais de 150 clientes satisfeitos que já transformaram seu negócio com um site profissional</p>
-            <a href="#contact" class="btn">Solicitar Orçamento</a>
+            <a href="#pricing" class="btn">Ver Planos</a>
         </div>
     </section>
 
@@ -1584,6 +1862,102 @@
         
         chatButton.addEventListener('click', () => {
             window.open('https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre os sites.', '_blank');
+        });
+
+        // Sistema de Checkout
+        const checkoutModal = document.getElementById('checkoutModal');
+        const closeCheckout = document.getElementById('closeCheckout');
+        const checkoutBtns = document.querySelectorAll('.checkout-btn');
+        const confirmPayment = document.getElementById('confirmPayment');
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        const pixDetails = document.getElementById('pixDetails');
+        const mercadopagoDetails = document.getElementById('mercadopagoDetails');
+
+        let selectedPlan = '';
+        let selectedPrice = 0;
+        let selectedPaymentMethod = '';
+
+        // Abrir checkout
+        checkoutBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                selectedPlan = btn.getAttribute('data-plan');
+                selectedPrice = parseInt(btn.getAttribute('data-price'));
+                
+                document.getElementById('summaryPlan').textContent = selectedPlan;
+                document.getElementById('summaryPrice').textContent = `R$ ${selectedPrice}`;
+                document.getElementById('summaryTotal').textContent = `R$ ${selectedPrice}`;
+                
+                checkoutModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Fechar checkout
+        closeCheckout.addEventListener('click', () => {
+            checkoutModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Fechar modal ao clicar fora
+        window.addEventListener('click', (e) => {
+            if (e.target === checkoutModal) {
+                checkoutModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Selecionar método de pagamento
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remover seleção anterior
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                
+                // Adicionar seleção atual
+                option.classList.add('selected');
+                
+                selectedPaymentMethod = option.getAttribute('data-method');
+                
+                // Mostrar detalhes do método selecionado
+                if (selectedPaymentMethod === 'pix') {
+                    pixDetails.style.display = 'block';
+                    mercadopagoDetails.style.display = 'none';
+                    
+                    // Aplicar desconto no PIX
+                    const discountedPrice = selectedPrice * 0.95;
+                    document.getElementById('summaryTotal').textContent = `R$ ${discountedPrice.toFixed(2)}`;
+                } else {
+                    pixDetails.style.display = 'none';
+                    mercadopagoDetails.style.display = 'block';
+                    document.getElementById('summaryTotal').textContent = `R$ ${selectedPrice}`;
+                }
+            });
+        });
+
+        // Confirmar pagamento
+        confirmPayment.addEventListener('click', () => {
+            const name = document.getElementById('customerName').value;
+            const email = document.getElementById('customerEmail').value;
+            const phone = document.getElementById('customerPhone').value;
+            
+            if (!name || !email || !phone) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            if (!selectedPaymentMethod) {
+                alert('Por favor, selecione uma forma de pagamento.');
+                return;
+            }
+            
+            // Simular processamento do pagamento
+            alert('Pedido confirmado! Em instantes você receberá as instruções de pagamento por e-mail.');
+            
+            // Fechar modal
+            checkoutModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Limpar formulário
+            document.getElementById('checkoutForm').reset();
         });
         
         // Scroll animations
