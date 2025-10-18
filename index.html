@@ -242,9 +242,10 @@
             margin: 20px auto 0;
         }
         
+        /* Services Grid - Modificado para 4 cards em 2x2 */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
         
@@ -991,6 +992,11 @@
             .credibility-badges {
                 gap: 20px;
             }
+            
+            /* Responsividade para a nova grid de serviços */
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1107,6 +1113,13 @@
                     </div>
                     <h3>Manutenção Mensal</h3>
                     <p>Seu site sempre atualizado, seguro e funcionando perfeitamente. Atualizações, backups e suporte técnico inclusos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Lojas Virtuais</h3>
+                    <p>E-commerces completos para vender seus produtos online. Integração com meios de pagamento e gestão de pedidos.</p>
                 </div>
             </div>
         </div>
@@ -1481,6 +1494,7 @@
                         <li><a href="#services">Sites Institucionais</a></li>
                         <li><a href="#services">Landing Pages</a></li>
                         <li><a href="#services">Manutenção Mensal</a></li>
+                        <li><a href="#services">Lojas Virtuais</a></li>
                         <li><a href="#pricing">Planos e Preços</a></li>
                     </ul>
                 </div>
