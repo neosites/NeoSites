@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa XYZ - Soluções Inovadoras para seu Negócio</title>
-    <meta name="description" content="Há mais de 10 anos oferecendo soluções digitais completas para empresas. Consultoria, desenvolvimento web e marketing digital.">
+    <title>NeoSites - Sites Profissionais 100% Anônimos</title>
+    <meta name="description" content="Criamos sites profissionais sem você precisar aparecer. Sites para salões, autônomos e pequenas empresas. Pronto em 7 dias com preços acessíveis.">
     <style>
         /* Reset e estilos gerais */
         * {
@@ -15,8 +15,8 @@
         }
         
         :root {
-            --primary: #3498db;
-            --primary-dark: #2980b9;
+            --primary: #27ae60;
+            --primary-dark: #219653;
             --secondary: #2c3e50;
             --accent: #e74c3c;
             --light: #ecf0f1;
@@ -130,7 +130,7 @@
         
         /* Banner */
         .banner {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 150px 20px;
@@ -179,6 +179,34 @@
         .btn-secondary:hover {
             background-color: white;
             color: var(--secondary);
+        }
+        
+        /* Selos de Credibilidade */
+        .credibility-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 150px;
+        }
+        
+        .badge-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .badge-text {
+            font-size: 0.9rem;
+            color: var(--light);
         }
         
         /* Seção de serviços */
@@ -343,7 +371,116 @@
             transform: scale(1.05);
         }
         
-        /* Seção de depoimentos - MELHORADA */
+        /* Seção de Processo */
+        .process {
+            background-color: #f9f9f9;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        /* Seção de Planos */
+        .pricing {
+            background-color: white;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            transition: var(--transition);
+            border: 2px solid #eaeaea;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-features li i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        /* Seção de depoimentos */
         .testimonials {
             background-color: #f9f9f9;
         }
@@ -417,7 +554,7 @@
             font-size: 0.9rem;
         }
         
-        /* Formulário de Depoimentos - NOVO */
+        /* Formulário de Depoimentos */
         .add-testimonial {
             background-color: white;
             padding: 40px;
@@ -464,7 +601,7 @@
         .form-control:focus {
             border-color: var(--primary);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
         }
         
         textarea.form-control {
@@ -513,55 +650,22 @@
             background-color: #e0e0e0;
         }
         
-        /* Seção de números */
-        .numbers {
+        /* Seção de Garantia */
+        .guarantee {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-align: center;
+            padding: 60px 20px;
         }
         
-        .numbers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .number-item h3 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        
-        .number-item p {
-            font-size: 1.1rem;
-        }
-        
-        /* Seção de clientes */
-        .clients {
-            background-color: white;
-        }
-        
-        .clients-grid {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .client-logo {
-            opacity: 0.6;
-            transition: var(--transition);
-            filter: grayscale(100%);
-        }
-        
-        .client-logo:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-        }
-        
-        .client-logo img {
-            max-height: 60px;
-            width: auto;
+        .guarantee-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
         
         /* Seção de FAQ */
@@ -815,6 +919,14 @@
             .testimonial-form {
                 grid-template-columns: 1fr;
             }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
         }
         
         @media (max-width: 768px) {
@@ -873,6 +985,10 @@
             .btn-secondary {
                 margin-left: 0;
             }
+            
+            .credibility-badges {
+                gap: 20px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -891,6 +1007,10 @@
             .add-testimonial {
                 padding: 20px;
             }
+            
+            .pricing-card {
+                padding: 30px 20px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -901,9 +1021,9 @@
         <div class="container header-container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-leaf"></i>
                 </div>
-                <div class="logo-text">Empresa<span>XYZ</span></div>
+                <div class="logo-text">Neo<span>Sites</span></div>
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -912,7 +1032,8 @@
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
-                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#process">Como Funciona</a></li>
+                    <li><a href="#pricing">Planos</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contato</a></li>
@@ -924,11 +1045,38 @@
     <!-- Banner Principal -->
     <section class="banner" id="home">
         <div class="container">
-            <h1>Soluções Inovadoras para o Seu Negócio</h1>
-            <p>Oferecemos serviços de alta qualidade que impulsionam resultados e transformam empresas. Mais de 10 anos de experiência no mercado.</p>
+            <h1>Seu Site Profissional, Sem Você Aparecer</h1>
+            <p>Presença digital completa para salões, autônomos e pequenas empresas. Sites profissionais prontos em 7 dias, 100% anônimo e sem investimento inicial.</p>
             <div class="btn-group">
-                <a href="#contact" class="btn">Entre em Contato</a>
-                <a href="#services" class="btn btn-secondary">Nossos Serviços</a>
+                <a href="#pricing" class="btn">Ver Planos</a>
+                <a href="#process" class="btn btn-secondary">Como Funciona</a>
+            </div>
+            
+            <div class="credibility-badges">
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="badge-text">Pagamento Seguro</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="badge-text">Site em 7 Dias</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="badge-text">100% Anônimo</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="badge-text">Suporte 24/7</div>
+                </div>
             </div>
         </div>
     </section>
@@ -938,29 +1086,29 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nossos Serviços</h2>
-                <p>Conheça nossas soluções especializadas para atender às suas necessidades</p>
+                <p>Soluções completas para sua presença digital</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Consultoria Estratégica</h3>
-                    <p>Desenvolvemos estratégias personalizadas para otimizar seus processos e maximizar resultados com base em dados e análise de mercado.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Criamos sites e aplicações web modernas, responsivas e de alto desempenho utilizando as melhores tecnologias do mercado.</p>
+                    <h3>Sites Institucionais</h3>
+                    <p>Presença profissional online com design moderno e responsivo. Ideal para mostrar seus serviços e conquistar novos clientes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3>Marketing Digital</h3>
-                    <p>Estratégias de marketing digital para aumentar sua visibilidade, engajamento e conversões através de múltiplos canais.</p>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas de alta conversão para promoções especiais, lançamentos e campanhas de marketing direcionadas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção Mensal</h3>
+                    <p>Seu site sempre atualizado, seguro e funcionando perfeitamente. Atualizações, backups e suporte técnico inclusos.</p>
                 </div>
             </div>
         </div>
@@ -971,50 +1119,160 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Sobre Nossa Empresa</h2>
-                    <p>Com mais de 10 anos de experiência no mercado, a Empresa XYZ se consolidou como referência em soluções inovadoras para empresas de todos os portes.</p>
-                    <p>Nossa missão é transformar desafios em oportunidades, oferecendo serviços de alta qualidade que impulsionam o crescimento sustentável dos nossos clientes.</p>
+                    <h2>Por Que Escolher a NeoSites?</h2>
+                    <p>Entendemos que cada negócio é único, especialmente para profissionais que preferem manter o anonimato online. Criamos soluções que respeitam sua privacidade enquanto constroem sua presença digital.</p>
                     
                     <div class="about-features">
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Equipe especializada e certificada</span>
+                            <span>Totalmente anônimo - você não precisa aparecer</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Metodologias ágeis e comprovadas</span>
+                            <span>Preços acessíveis sem surpresas</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Suporte contínuo e personalizado</span>
+                            <span>Suporte especializado em português</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Tecnologias de ponta e inovação</span>
+                            <span>Entrega rápida - site em 7 dias</span>
                         </div>
                     </div>
                     
-                    <a href="#contact" class="btn">Saiba Mais</a>
+                    <a href="#contact" class="btn">Falar com Especialista</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Nossa equipe de trabalho">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Equipe NeoSites trabalhando">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Depoimentos - MELHORADA -->
+    <!-- Seção de Processo -->
+    <section class="process section-padding" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Funciona</h2>
+                <p>4 passos simples para ter seu site profissional</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Escolha o Plano</h3>
+                    <p>Selecione o plano que melhor atende suas necessidades e orçamento</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Preencha o Formulário</h3>
+                    <p>Envie suas informações e preferências através do nosso formulário seguro</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Aprovação do Layout</h3>
+                    <p>Em 48h você recebe o layout para aprovação e ajustes finais</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Site Pronto</h3>
+                    <p>Em 7 dias seu site estará no ar e pronto para receber clientes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Planos -->
+    <section class="pricing section-padding" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Planos e Preços</h2>
+                <p>Escolha o plano perfeito para seu negócio</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Básico</div>
+                    <div class="plan-price">R$199</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 4 páginas personalizadas</li>
+                        <li><i class="fas fa-check"></i> Design responsivo</li>
+                        <li><i class="fas fa-check"></i> Formulário de contato</li>
+                        <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
+                        <li><i class="fas fa-check"></i> Integração com WhatsApp</li>
+                    </ul>
+                    <a href="#contact" class="btn">Escolher Plano</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">R$299</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 6 páginas personalizadas</li>
+                        <li><i class="fas fa-check"></i> Design responsivo</li>
+                        <li><i class="fas fa-check"></i> Galeria de imagens</li>
+                        <li><i class="fas fa-check"></i> SEO básico</li>
+                        <li><i class="fas fa-check"></i> Integração redes sociais</li>
+                        <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
+                    </ul>
+                    <a href="#contact" class="btn">Escolher Plano</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">Premium</div>
+                    <div class="plan-price">R$499</div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 8 páginas personalizadas</li>
+                        <li><i class="fas fa-check"></i> Design premium responsivo</li>
+                        <li><i class="fas fa-check"></i> Landing page extra</li>
+                        <li><i class="fas fa-check"></i> SEO avançado</li>
+                        <li><i class="fas fa-check"></i> Analytics integrado</li>
+                        <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
+                    </ul>
+                    <a href="#contact" class="btn">Escolher Plano</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <div class="plan-name">Manutenção Mensal</div>
+                <div class="plan-price">R$49<span>/mês</span></div>
+                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 20px;">Atualizações, segurança, backups e suporte técnico para manter seu site sempre perfeito</p>
+                <a href="#contact" class="btn">Contratar Manutenção</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Garantia -->
+    <section class="guarantee section-padding">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h2>Garantia de Satisfação</h2>
+                <p>Se em 14 dias você não estiver completamente satisfeito com seu site, devolvemos 100% do seu investimento. Trabalhamos com transparência e compromisso com seus resultados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
     <section class="testimonials section-padding" id="testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>O Que Nossos Clientes Dizem</h2>
-                <p>Confira alguns depoimentos de quem já experimentou nossos serviços</p>
+                <p>Confira experiências reais de quem já contratou nossos serviços</p>
             </div>
             
             <div class="testimonials-container">
-                <!-- Formulário para Adicionar Depoimento - NOVO -->
+                <!-- Grid de Depoimentos -->
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Depoimentos serão carregados aqui via JavaScript -->
+                </div>
+                
+                <!-- Formulário para Adicionar Depoimento -->
                 <div class="add-testimonial">
-                    <h3>Deixe seu Depoimento</h3>
+                    <h3>Deixe Seu Depoimento</h3>
                     <form class="testimonial-form" id="testimonialForm">
                         <div class="form-group">
                             <label for="userName">Nome Completo</label>
@@ -1040,68 +1298,12 @@
                         </div>
                         <div class="form-group full-width">
                             <label for="userTestimonial">Seu Depoimento</label>
-                            <textarea id="userTestimonial" class="form-control" required placeholder="Conte sua experiência com nossa empresa..."></textarea>
+                            <textarea id="userTestimonial" class="form-control" required placeholder="Conte sua experiência com a NeoSites..."></textarea>
                         </div>
                         <div class="form-group full-width" style="text-align: center;">
                             <button type="submit" class="btn">Enviar Depoimento</button>
                         </div>
                     </form>
-                </div>
-                
-                <!-- Grid de Depoimentos -->
-                <div class="testimonials-grid" id="testimonialsGrid">
-                    <!-- Depoimentos serão carregados aqui via JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Números -->
-    <section class="numbers section-padding">
-        <div class="container">
-            <div class="numbers-grid">
-                <div class="number-item">
-                    <h3>500+</h3>
-                    <p>Projetos Concluídos</p>
-                </div>
-                <div class="number-item">
-                    <h3>150+</h3>
-                    <p>Clientes Satisfeitos</p>
-                </div>
-                <div class="number-item">
-                    <h3>10+</h3>
-                    <p>Anos de Experiência</p>
-                </div>
-                <div class="number-item">
-                    <h3>25+</h3>
-                    <p>Prêmios Recebidos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Clientes -->
-    <section class="clients section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nossos Clientes</h2>
-                <p>Trabalhamos com empresas de todos os tamanhos e segmentos</p>
-            </div>
-            <div class="clients-grid">
-                <div class="client-logo">
-                    <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Cliente+1" alt="Cliente 1">
-                </div>
-                <div class="client-logo">
-                    <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Cliente+2" alt="Cliente 2">
-                </div>
-                <div class="client-logo">
-                    <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Cliente+3" alt="Cliente 3">
-                </div>
-                <div class="client-logo">
-                    <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Cliente+4" alt="Cliente 4">
-                </div>
-                <div class="client-logo">
-                    <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Cliente+5" alt="Cliente 5">
                 </div>
             </div>
         </div>
@@ -1112,37 +1314,37 @@
         <div class="container">
             <div class="section-title">
                 <h2>Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas sobre nossos serviços e processos</p>
+                <p>Tire suas dúvidas sobre nossos serviços</p>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">Quais são as formas de pagamento aceitas?</div>
+                    <div class="faq-question">Como funciona o processo 100% anônimo?</div>
                     <div class="faq-answer">
-                        <p>Aceitamos diversas formas de pagamento, incluindo cartão de crédito (em até 12x), boleto bancário, PIX e transferência bancária. Para projetos de maior valor, também oferecemos condições especiais de parcelamento.</p>
+                        <p>Você não precisa mostrar rosto, usar voz ou revelar sua identidade em nenhuma etapa. Todo o processo é feito por formulários, e-mail e WhatsApp. Seu site será criado sem qualquer referência pessoal, mantendo seu anonimato completo.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Qual é o prazo médio para entrega de um projeto?</div>
+                    <div class="faq-question">Quais são as formas de pagamento?</div>
                     <div class="faq-answer">
-                        <p>O prazo varia de acordo com a complexidade do projeto. Sites institucionais simples podem ser entregues em 15 a 30 dias, enquanto projetos mais complexos, como e-commerces ou sistemas personalizados, podem levar de 2 a 4 meses. Durante o briefing, apresentamos um cronograma detalhado com todas as etapas e prazos.</p>
+                        <p>Aceitamos PIX e Mercado Pago. Para o PIX, enviamos uma chave aleatória para pagamento. No Mercado Pago, você pode pagar com cartão de crédito (em até 12x) ou boleto.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Vocês oferecem suporte após a entrega do projeto?</div>
+                    <div class="faq-question">Qual é o prazo para entrega do site?</div>
                     <div class="faq-answer">
-                        <p>Sim, oferecemos diferentes planos de suporte e manutenção conforme a necessidade de cada cliente. Todos os projetos incluem 30 dias de suporte gratuito após a entrega. Após esse período, podemos contratar planos mensais ou anuais de manutenção.</p>
+                        <p>Nosso prazo padrão é de 7 dias úteis. Em casos de urgência, oferecemos a opção de entrega em 3 dias com acréscimo no valor. Após o preenchimento do formulário e aprovação do layout, mantemos você informado sobre cada etapa.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Como é o processo de desenvolvimento de um projeto?</div>
+                    <div class="faq-question">O que inclui a manutenção mensal?</div>
                     <div class="faq-answer">
-                        <p>Nosso processo é dividido em etapas: 1) Briefing e entendimento das necessidades; 2) Planejamento e proposta; 3) Design e prototipagem; 4) Desenvolvimento; 5) Testes e ajustes; 6) Lançamento; 7) Suporte pós-entrega. Mantemos o cliente envolvido em todas as etapas com reuniões regulares de acompanhamento.</p>
+                        <p>Nosso plano de manutenção inclui: atualizações de segurança, backups regulares, suporte técnico, pequenas atualizações de conteúdo, monitoramento de desempenho e garantia de que seu site estará sempre funcionando perfeitamente.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Vocês trabalham com empresas de qualquer tamanho?</div>
+                    <div class="faq-question">Posso fazer alterações no site depois de pronto?</div>
                     <div class="faq-answer">
-                        <p>Sim, atendemos desde startups e pequenas empresas até grandes corporações. Desenvolvemos soluções escaláveis que crescem junto com o seu negócio, sempre adequando a complexidade e o investimento ao perfil de cada cliente.</p>
+                        <p>Sim! Oferecemos planos de manutenção que incluem alterações de conteúdo. Se preferir fazer você mesmo, podemos configurar um painel administrativo intuitivo para que você mesmo faça atualizações básicas.</p>
                     </div>
                 </div>
             </div>
@@ -1152,8 +1354,8 @@
     <!-- Seção de CTA -->
     <section class="cta section-padding">
         <div class="container">
-            <h2>Pronto para transformar seu negócio?</h2>
-            <p>Entre em contato conosco e descubra como podemos ajudar a alcançar seus objetivos</p>
+            <h2>Pronto para Ter Seu Site Profissional?</h2>
+            <p>Junte-se a mais de 150 clientes satisfeitos que já transformaram seu negócio com um site profissional</p>
             <a href="#contact" class="btn">Solicitar Orçamento</a>
         </div>
     </section>
@@ -1163,7 +1365,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Entre em Contato</h2>
-                <p>Estamos aqui para responder suas perguntas e ouvir suas ideias</p>
+                <p>Estamos aqui para tirar suas dúvidas e criar seu site</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
@@ -1173,20 +1375,11 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h4>Endereço</h4>
-                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Telefone</h4>
-                                <p>(11) 9999-9999</p>
+                                <h4>WhatsApp</h4>
+                                <p>(11) 99999-9999</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1195,7 +1388,7 @@
                             </div>
                             <div>
                                 <h4>E-mail</h4>
-                                <p>contato@empresaxyz.com.br</p>
+                                <p>contato@neosites.com.br</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1205,13 +1398,14 @@
                             <div>
                                 <h4>Horário de Atendimento</h4>
                                 <p>Segunda a Sexta: 9h às 18h</p>
+                                <p>Sábado: 9h às 12h</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
@@ -1228,18 +1422,24 @@
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <label for="phone">WhatsApp</label>
+                            <input type="tel" id="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="basico">Site Básico - R$199</option>
+                                <option value="pro">Site Pro - R$299</option>
+                                <option value="premium">Site Premium - R$499</option>
+                                <option value="manutencao">Manutenção Mensal - R$49</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" placeholder="Conte-nos sobre seu projeto..." required></textarea>
                         </div>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
+                        <button type="submit" class="btn">Solicitar Orçamento</button>
                     </form>
                 </div>
             </div>
@@ -1251,11 +1451,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h3>Empresa XYZ</h3>
-                    <p>Há mais de 10 anos oferecendo soluções digitais completas para empresas de todos os portes.</p>
+                    <h3>NeoSites</h3>
+                    <p>Criamos sites profissionais 100% anônimos para salões, autônomos e pequenas empresas. Presença digital sem você aparecer.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
@@ -1265,32 +1465,31 @@
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#services">Serviços</a></li>
-                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#process">Como Funciona</a></li>
+                        <li><a href="#pricing">Planos</a></li>
                         <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="#">Consultoria Estratégica</a></li>
-                        <li><a href="#">Desenvolvimento Web</a></li>
-                        <li><a href="#">Marketing Digital</a></li>
-                        <li><a href="#">Design UI/UX</a></li>
-                        <li><a href="#">SEO e Analytics</a></li>
+                        <li><a href="#services">Sites Institucionais</a></li>
+                        <li><a href="#services">Landing Pages</a></li>
+                        <li><a href="#services">Manutenção Mensal</a></li>
+                        <li><a href="#pricing">Planos e Preços</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contato</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
-                        <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
-                        <li><i class="fas fa-envelope"></i> contato@empresaxyz.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@neosites.com.br</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 9h-18h | Sáb: 9h-12h</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Empresa XYZ. Todos os direitos reservados.</p>
+                <p>&copy; 2023 NeoSites. Todos os direitos reservados. | Sites profissionais 100% anônimos</p>
             </div>
         </div>
     </footer>
@@ -1300,31 +1499,31 @@
         const initialTestimonials = [
             {
                 name: "Carlos Mendes",
-                role: "Diretor Comercial",
-                company: "TechSolutions Ltda",
+                role: "Dono de Salão",
+                company: "Beleza Total",
                 photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&q=60",
-                text: "A Empresa XYZ revolucionou nossa estratégia digital. Em 6 meses, nosso faturamento online cresceu 200%. Profissionais extremamente competentes."
+                text: "Contratei a NeoSites para criar o site do meu salão e foi a melhor decisão. Em uma semana estava tudo pronto, sem eu precisar aparecer. Agora meus clientes agendam pelo site!"
             },
             {
                 name: "Ana Santos",
-                role: "Gerente de Marketing",
-                company: "GlobalCommerce",
+                role: "Eletricista",
+                company: "Instalações Elétricas AS",
                 photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
-                text: "Trabalho excepcional! Desenvolveram nossa plataforma de e-commerce com perfeição. Suporte pós-venda impecável e sempre disponível."
+                text: "Como mulher na área técnica, prefiro não me expor. A NeoSites entendeu perfeitamente minha necessidade e criou um site profissional que gera credibilidade sem mostrar meu rosto."
             },
             {
                 name: "Roberto Silva",
-                role: "CEO",
-                company: "InovaTech",
+                role: "Consultor",
+                company: "RS Consultoria",
                 photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0JTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60",
-                text: "Parceria de longa data. A Empresa XYZ entende profundamente nosso negócio e sempre entrega soluções que superam expectativas."
+                text: "Excelente serviço! Site entregue antes do prazo, exatamente como combinado. Manutenção mensal me deixa tranquilo sabendo que tudo está funcionando perfeitamente."
             },
             {
                 name: "Mariana Oliveira",
-                role: "Fundadora",
-                company: "EcoProducts",
+                role: "Designer de Sobrancelhas",
+                company: "Studio Mari",
                 photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
-                text: "Consultoria estratégica transformadora. Nos ajudaram a reposicionar nossa marca e os resultados foram impressionantes. Recomendo!"
+                text: "Adorei o processo 100% anônimo. Pude ter um site lindo sem precisar gravar vídeos ou fazer fotos profissionais. Recomendo para quem valoriza privacidade!"
             }
         ];
 
@@ -1362,11 +1561,11 @@
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            alert('Mensagem enviada com sucesso! Entraremos em contato em até 24h.');
             contactForm.reset();
         });
 
-        // Sistema de Depoimentos - NOVO
+        // Sistema de Depoimentos
         const testimonialForm = document.getElementById('testimonialForm');
         const testimonialsGrid = document.getElementById('testimonialsGrid');
         const uploadTrigger = document.getElementById('uploadTrigger');
@@ -1374,7 +1573,7 @@
         const photoPreview = document.getElementById('photoPreview');
 
         // Carregar depoimentos do localStorage ou usar os iniciais
-        let testimonials = JSON.parse(localStorage.getItem('testimonials')) || initialTestimonials;
+        let testimonials = JSON.parse(localStorage.getItem('neosites_testimonials')) || initialTestimonials;
 
         // Função para renderizar depoimentos
         function renderTestimonials() {
@@ -1427,7 +1626,7 @@
             };
 
             testimonials.unshift(newTestimonial);
-            localStorage.setItem('testimonials', JSON.stringify(testimonials));
+            localStorage.setItem('neosites_testimonials', JSON.stringify(testimonials));
             renderTestimonials();
             testimonialForm.reset();
             photoPreview.innerHTML = '<i class="fas fa-user"></i>';
@@ -1438,7 +1637,7 @@
         renderTestimonials();
         
         // Scroll animations
-        const fadeElements = document.querySelectorAll('.service-card, .testimonial-card, .faq-item, .about-content, .numbers-grid');
+        const fadeElements = document.querySelectorAll('.service-card, .testimonial-card, .faq-item, .about-content, .process-step, .pricing-card');
         
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
