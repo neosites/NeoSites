@@ -242,10 +242,10 @@
             margin: 20px auto 0;
         }
         
-        /* Services Grid - Layout 2x2 para mobile */
+        /* Services Grid - Layout original para desktop, 2x2 apenas para mobile */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
@@ -364,10 +364,10 @@
             background-color: #f9f9f9;
         }
         
-        /* Portfolio Grid - Layout 2x2 para mobile */
+        /* Portfolio Grid - Layout original para desktop, 2x2 apenas para mobile */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -419,10 +419,10 @@
             background-color: white;
         }
         
-        /* Process Steps - Layout 2x2 para mobile */
+        /* Process Steps - Layout original para desktop, 2x2 apenas para mobile */
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -460,10 +460,10 @@
             background-color: white;
         }
         
-        /* Pricing Grid - Layout 2x2 para mobile */
+        /* Pricing Grid - Layout original para desktop, 2x2 apenas para mobile */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -541,10 +541,10 @@
             gap: 50px;
         }
         
-        /* Testimonials Grid - Layout 2x2 para mobile */
+        /* Testimonials Grid - Layout original para desktop, 2x2 apenas para mobile */
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
@@ -1001,6 +1001,27 @@
             .credibility-badges {
                 gap: 20px;
             }
+            
+            /* Layout 2x2 APENAS para dispositivos móveis */
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 576px) {
@@ -1316,7 +1337,7 @@
                 </div>
                 
                 <div class="pricing-card">
-                    <div class="plan-name">Manutenção Mensal</div>
+                    <div class="plan-name">Manutenção</div>
                     <div class="plan-price">R$49<span>/mês</span></div>
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> Atualizações de segurança</li>
