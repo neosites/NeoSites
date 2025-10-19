@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoSites - Sites Profissionais que Convertem</title>
     <meta name="description" content="Criamos sites profissionais para salões, autônomos e pequenas empresas. Design moderno, otimizado para resultados e prontos em 7 dias.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
     <style>
         * {
             margin: 0;
@@ -242,7 +243,7 @@
             margin: 20px auto 0;
         }
         
-        /* Services Grid - Layout original para desktop, 2x2 apenas para mobile */
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -358,13 +359,48 @@
         .about-image:hover img {
             transform: scale(1.05);
         }
+
+        /* Who We Are */
+        .who-we-are {
+            background-color: #f9f9f9;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid var(--primary);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .team-info p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
         
         /* Portfolio */
         .portfolio {
             background-color: #f9f9f9;
         }
         
-        /* Portfolio Grid - Layout original para desktop, 2x2 apenas para mobile */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -419,7 +455,6 @@
             background-color: white;
         }
         
-        /* Process Steps - Layout original para desktop, 2x2 apenas para mobile */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -460,7 +495,6 @@
             background-color: white;
         }
         
-        /* Pricing Grid - Layout original para desktop, 2x2 apenas para mobile */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -541,7 +575,6 @@
             gap: 50px;
         }
         
-        /* Testimonials Grid - Layout original para desktop, 2x2 apenas para mobile */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1076,7 +1109,6 @@
                 gap: 20px;
             }
             
-            /* Layout 2x2 para dispositivos móveis */
             .services-grid,
             .portfolio-grid,
             .process-steps,
@@ -1113,7 +1145,6 @@
                 padding: 30px 20px;
             }
             
-            /* Para telas muito pequenas, voltar para 1 coluna */
             .services-grid,
             .portfolio-grid,
             .process-steps,
@@ -1131,7 +1162,7 @@
         <div class="container header-container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
                 <div class="logo-text">Neo<span>Sites</span></div>
             </a>
@@ -1142,6 +1173,7 @@
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#pricing">Planos</a></li>
                     <li><a href="#testimonials">Depoimentos</a></li>
@@ -1156,7 +1188,7 @@
     <section class="banner" id="home">
         <div class="container">
             <h1>Seu Site Profissional em 7 Dias</h1>
-            <p>Desenvolvemos sites modernos e otimizados para salões, autônomos e pequenas empresas. Design profissional que converte visitantes em clientes.</p>
+            <p>Criamos sites modernos e otimizados para salões, autônomos e pequenas empresas. Aumente sua visibilidade e converta visitantes em clientes com um site que realmente funciona.</p>
             <div class="btn-group">
                 <a href="#pricing" class="btn">Ver Planos</a>
                 <a href="#portfolio" class="btn btn-secondary">Ver Portfólio</a>
@@ -1231,37 +1263,59 @@
         </div>
     </section>
 
+    <!-- Who We Are -->
+    <section class="who-we-are section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quem Somos</h2>
+                <p>Conheça a pessoa por trás da NeoSites</p>
+            </div>
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60" alt="Fundador da NeoSites">
+                </div>
+                <div class="team-info">
+                    <h3>João Silva - Fundador da NeoSites</h3>
+                    <p>Sou desenvolvedor web com 3 anos de experiência, especializado em criar sites que realmente convertem visitantes em clientes. A NeoSites nasceu da minha paixão por ajudar pequenos negócios a terem uma presença online profissional, mesmo com orçamentos limitados.</p>
+                    <p>Apesar de ser um empreendedor iniciante, trabalho com dedicação total para entregar sites de alta qualidade que superem as expectativas dos meus clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About -->
-    <section class="about section-padding" id="about">
+    <section class="about section-padding">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Soluções Profissionais para Seu Negócio</h2>
-                    <p>Com anos de experiência no mercado digital, desenvolvemos sites que não apenas impressionam visualmente, mas também geram resultados concretos para seu negócio.</p>
+                    <h2>Como Trabalhamos</h2>
+                    <p>Nosso processo é simples, transparente e focado em resultados:</p>
                     
                     <div class="about-features">
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Design moderno e responsivo</span>
+                            <span><strong>Briefing detalhado:</strong> Entendemos seu negócio e objetivos</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Otimizado para mecanismos de busca</span>
+                            <span><strong>Protótipo visual:</strong> Aprovação do layout antes do desenvolvimento</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Integração com redes sociais</span>
+                            <span><strong>Desenvolvimento ágil:</strong> Seu site pronto em até 7 dias</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Suporte técnico especializado</span>
+                            <span><strong>Entrega e treinamento:</strong> Ensino como gerenciar seu site</span>
                         </div>
                     </div>
+                    
+                    <p><strong>Domínio e Hospedagem:</strong> Todos os nossos planos incluem hospedagem por 1 ano. O domínio próprio (.com.br) pode ser adquirido separadamente por R$ 50/ano.</p>
                     
                     <a href="#contact" class="btn">Falar com Especialista</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Equipe NeoSites trabalhando">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Processo de desenvolvimento da NeoSites">
                 </div>
             </div>
         </div>
@@ -1370,6 +1424,7 @@
                         <li><i class="fas fa-check"></i> Formulário de contato</li>
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
                         <li><i class="fas fa-check"></i> Integração com WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Entrega em 7 dias</li>
                     </ul>
                     <button class="btn whatsapp-btn" data-plano="Básico" data-valor="199">
                         <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
@@ -1386,6 +1441,7 @@
                         <li><i class="fas fa-check"></i> SEO básico</li>
                         <li><i class="fas fa-check"></i> Integração redes sociais</li>
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
+                        <li><i class="fas fa-check"></i> Entrega em 7 dias</li>
                     </ul>
                     <button class="btn whatsapp-btn" data-plano="Pro" data-valor="299">
                         <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
@@ -1402,6 +1458,7 @@
                         <li><i class="fas fa-check"></i> SEO avançado</li>
                         <li><i class="fas fa-check"></i> Analytics integrado</li>
                         <li><i class="fas fa-check"></i> Hospedagem por 1 ano</li>
+                        <li><i class="fas fa-check"></i> Entrega em 7 dias</li>
                     </ul>
                     <button class="btn whatsapp-btn" data-plano="Premium" data-valor="499">
                         <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
@@ -1417,11 +1474,19 @@
                         <li><i class="fas fa-check"></i> Suporte técnico</li>
                         <li><i class="fas fa-check"></i> Pequenas atualizações</li>
                         <li><i class="fas fa-check"></i> Monitoramento</li>
+                        <li><i class="fas fa-check"></i> Garantia de funcionamento</li>
                     </ul>
                     <button class="btn whatsapp-btn" data-plano="Manutenção Mensal" data-valor="49">
                         <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
                     </button>
                 </div>
+            </div>
+            
+            <div class="payment-info" style="text-align: center; margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                <h3 style="color: var(--secondary); margin-bottom: 15px;">Formas de Pagamento</h3>
+                <p><strong>PIX:</strong> 5% de desconto à vista</p>
+                <p><strong>Cartão de Crédito:</strong> Parcele em até 12x via Mercado Pago</p>
+                <p><strong>Boleto:</strong> À vista com vencimento em 3 dias</p>
             </div>
         </div>
     </section>
@@ -1451,6 +1516,7 @@
                 </div>
                 <h2>Garantia de Satisfação</h2>
                 <p>Oferecemos 14 dias de garantia incondicional. Se não ficar satisfeito com seu site, devolvemos 100% do seu investimento.</p>
+                <p style="margin-top: 15px; font-size: 0.9rem;">* A garantia é válida para alterações no design e funcionalidades acordadas no briefing.</p>
             </div>
         </div>
     </section>
@@ -1466,7 +1532,7 @@
                 <div class="faq-item">
                     <div class="faq-question">Qual é o prazo para entrega do site?</div>
                     <div class="faq-answer">
-                        <p>Nosso prazo padrão é de 7 dias úteis. Em casos de urgência, oferecemos a opção de entrega em 3 dias com acréscimo no valor.</p>
+                        <p>Nosso prazo padrão é de 7 dias úteis. Em casos de urgência, oferecemos a opção de entrega em 3 dias com acréscimo de 30% no valor.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1487,6 +1553,18 @@
                         <p>Sim! Oferecemos planos de manutenção que incluem alterações de conteúdo. Se preferir fazer você mesmo, podemos configurar um painel administrativo intuitivo para que você mesmo faça atualizações básicas.</p>
                     </div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question">O domínio e hospedagem estão incluídos?</div>
+                    <div class="faq-answer">
+                        <p>Sim, todos os planos incluem hospedagem por 1 ano. O domínio próprio (.com.br) pode ser adquirido separadamente por R$ 50/ano, ou você pode usar um subdomínio gratuito enquanto testa o site.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Vocês fazem sites para qualquer tipo de negócio?</div>
+                    <div class="faq-answer">
+                        <p>Sim! Especializamo-nos em sites para salões de beleza, autônomos (eletricistas, encanadores, etc.), consultores, pequenas empresas e prestadores de serviços em geral.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1495,7 +1573,7 @@
     <section class="cta section-padding">
         <div class="container">
             <h2>Pronto para Ter Seu Site Profissional?</h2>
-            <p>Junte-se a mais de 150 clientes satisfeitos que já transformaram seu negócio com um site profissional</p>
+            <p>Junte-se a mais de 50 clientes satisfeitos que já transformaram seu negócio com um site profissional</p>
             <a href="#pricing" class="btn">Ver Planos</a>
         </div>
     </section>
@@ -1605,9 +1683,11 @@
                     <ul>
                         <li><a href="#home">Início</a></li>
                         <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
                         <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#pricing">Planos</a></li>
                         <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1627,6 +1707,7 @@
                         <li><i class="fas fa-envelope"></i> neosites01@gmail.com</li>
                         <li><i class="fas fa-clock"></i> Seg-Sex: 9h-18h | Sáb: 9h-12h</li>
                     </ul>
+                    <p style="margin-top: 15px;"><a href="#" style="color: #bdc3c7; text-decoration: underline;">Política de Privacidade</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1722,7 +1803,32 @@
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em até 24h.');
+            
+            // Coletar dados do formulário
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Criar mensagem para WhatsApp
+            const whatsappMessage = `Olá! Me chamo ${name}. Gostaria de informações sobre: ${service}
+
+Meus dados:
+• E-mail: ${email}
+• WhatsApp: ${phone}
+
+Mensagem: ${message}
+
+Por favor, entre em contato comigo!`;
+            
+            // Codificar mensagem para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Redirecionar para WhatsApp
+            window.open(`https://wa.me/5534984048732?text=${encodedMessage}`, '_blank');
+            
+            // Resetar formulário
             contactForm.reset();
         });
 
