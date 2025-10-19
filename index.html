@@ -242,10 +242,10 @@
             margin: 20px auto 0;
         }
         
-        /* Services Grid - Modificado para 2x2 em telas menores */
+        /* Services Grid - Layout 2x2 para mobile */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
         
@@ -364,10 +364,10 @@
             background-color: #f9f9f9;
         }
         
-        /* Portfolio Grid - Modificado para 2x2 em telas menores */
+        /* Portfolio Grid - Layout 2x2 para mobile */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
@@ -419,10 +419,10 @@
             background-color: white;
         }
         
-        /* Process Steps - Modificado para 2x2 em telas menores */
+        /* Process Steps - Layout 2x2 para mobile */
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
@@ -460,9 +460,10 @@
             background-color: white;
         }
         
+        /* Pricing Grid - Layout 2x2 para mobile */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
@@ -540,9 +541,10 @@
             gap: 50px;
         }
         
+        /* Testimonials Grid - Layout 2x2 para mobile */
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
         
@@ -999,21 +1001,6 @@
             .credibility-badges {
                 gap: 20px;
             }
-            
-            /* Layout 2x2 para serviços em dispositivos móveis */
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            /* Layout 2x2 para portfólio em dispositivos móveis */
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            /* Layout 2x2 para processo em dispositivos móveis */
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
         
         @media (max-width: 576px) {
@@ -1034,15 +1021,11 @@
             }
             
             /* Para telas muito pequenas, voltar para 1 coluna */
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-steps {
+            .services-grid,
+            .portfolio-grid,
+            .process-steps,
+            .pricing-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1276,7 +1259,6 @@
         </div>
     </section>
 
-    <!-- Restante do código permanece igual -->
     <!-- Pricing -->
     <section class="pricing section-padding" id="pricing">
         <div class="container">
@@ -1332,15 +1314,21 @@
                         <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
                     </button>
                 </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <div class="plan-name">Manutenção Mensal</div>
-                <div class="plan-price">R$49<span>/mês</span></div>
-                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 20px;">Atualizações, segurança, backups e suporte técnico para manter seu site sempre perfeito</p>
-                <button class="btn whatsapp-btn" data-plano="Manutenção Mensal" data-valor="49">
-                    <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
-                </button>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">Manutenção Mensal</div>
+                    <div class="plan-price">R$49<span>/mês</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Atualizações de segurança</li>
+                        <li><i class="fas fa-check"></i> Backups regulares</li>
+                        <li><i class="fas fa-check"></i> Suporte técnico</li>
+                        <li><i class="fas fa-check"></i> Pequenas atualizações</li>
+                        <li><i class="fas fa-check"></i> Monitoramento</li>
+                    </ul>
+                    <button class="btn whatsapp-btn" data-plano="Manutenção Mensal" data-valor="49">
+                        <i class="fab fa-whatsapp"></i> Solicitar via WhatsApp
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -1584,6 +1572,13 @@
                 company: "RS Consultoria",
                 photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0JTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&q=60",
                 text: "Excelente serviço! Site entregue antes do prazo, exatamente como combinado. Manutenção mensal me deixa tranquilo sabendo que tudo está funcionando perfeitamente."
+            },
+            {
+                name: "Mariana Costa",
+                role: "Proprietária",
+                company: "Restaurante Sabor & Arte",
+                photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&q=60",
+                text: "Site incrível para meu restaurante! Sistema de pedidos online aumentou nossas vendas em 60%. Clientes adoram a facilidade de fazer reservas pelo site."
             }
         ];
 
